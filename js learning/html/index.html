@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <script src="../js/script.js"></script>
 </head>
 <body>
-    
+    <h1>Welcome To HomePage</h1>
+    <div><button id="displayVarialbles" onclick="displayVarialbles()"> Displaying Variables</button></div>
+    <div><button id="performArthmeticOperation" onclick="performArthmeticOperation()"> Perfrom Arthemetic Operations</button></div>
+    <div><button id="checkPositiveNegative" onclick="checkNumberIsPositive()"> Check Number is positve or not</button></div>
+    <div><button id="printNumberbetween" onclick="printNumberbetween()">Print Numbers in Between</button></div>
+    <div><button id="addNumberFormArray" onclick="addNumberFormArray()">Sum of the numbers in array</button></div>
+    <div><button id="displayObjectDetails" onclick="displayObjectDetails()">Display Object Properties</button></div>
+    <div><button id="reverString" onclick="reverString()">Reverse String</button></div>
+    <div>
+        <button id="changeTextAfterClick" onclick="changeTextAfterClick()">Click Button ! </button>
+        <h1 id="dataToDisplay">Button is not Clicked</h1>
+    </div>
+    <div><button id="clear" onclick="clearData()">Clear Console</button></div>
+    <label for="data">Enter the Data : </label>
+    <input type="text" id="data" placeholder="enter the text here...">
+    <button onclick="submitData()">Submit</button>
 </body>
 </html>
