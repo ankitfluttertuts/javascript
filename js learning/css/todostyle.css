@@ -40,3 +40,14 @@
     padding-left: 10px;
     padding-right: 10px ;
 }
+
+.deleteBtn{
+  background-color: wheat;
+  display: inline;
+  padding: 0px 10px;
+}
+.listtasks{
+  display: flex;
+  align-items: start;
+gap: 10px;
+}
