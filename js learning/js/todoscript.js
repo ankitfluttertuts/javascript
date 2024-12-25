@@ -29,7 +29,7 @@ if(JSON.parse(browserLocalStorage.getItem("todoList")).length > 0) {
 
 buttonEvent.addEventListener("click",function(event){
     let inputDataTextValue = document.getElementById("textInputData").value;
-    event.preventDefault();
+    // event.preventDefault();
     console.log(inputDataTextValue);
     let arr = JSON.parse(browserLocalStorage.getItem("todoList"));
     arr.push(inputDataTextValue);
@@ -65,7 +65,45 @@ function updateTodoListUI(todoList) {
                 console.log("Event Called")
                 updateTodoListUI(todoList);
             })
+            const editButton = createElement("button","editBtn","","Edit");
+            const completedButton = createElement("button","completeBtn","","Completed");
+            newDiv.appendChild(completedButton);
+            completedButton.addEventListener("click",function(){
+                if(newListItem.style.textDecoration === "line-through"){
+                // newListItem.classList.add("completeBtn");
+                newListItem.style.textDecoration = "none"
+                }
+                else newListItem.style.textDecoration = "line-through"
+                
+
+            })
+            newDiv.appendChild(editButton);
+            editButton.addEventListener("click",function () {
+                console.log("Edit Button Event is called");
+                console.log(task);
+                inputField = createElement("input","","",task);
+                inputField.value = task;
+                newListItem.innerHTML = "";
+                newListItem.appendChild(inputField); 
+                button.textContent = "Save";
+                button.removeEventListener("click",arguments.callee);
+                button.addEventListener("click",function(){
+                    const updateTaskValue = inputField.value;
+                    todoList[index] = updateTaskValue;
+                    browserLocalStorage.setItem("todoList", JSON.stringify(todoList));
+                    updateTodoListUI(todoList);
+
+                })
+
+            })
     })
+    if(JSON.parse(browserLocalStorage.getItem("todoList")).length == 0) {
+        todoListContentElement.innerHTML = "No Data Added";
+        console.log("No Data Found")
+    }
+       
+    
+    
 }
 
 

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #heading {
   text-align: center;
@@ -39,10 +40,11 @@
 #submitButton{
     padding-left: 10px;
     padding-right: 10px ;
+
 }
 
 .deleteBtn{
-  background-color: wheat;
+  background-color: rgb(255, 144, 136);
   display: inline;
   padding: 0px 10px;
 }
@@ -50,4 +52,27 @@
   display: flex;
   align-items: start;
 gap: 10px;
+}
+.editBtn{
+  background-color: rgb(156, 173, 255);
+  display: inline;
+  padding: 0px 10px;
+  
+}
+.deleteBtn:hover{
+  background-color: rgb(255, 168, 162);
+  display: inline;
+  padding: 0px 10px;
+}
+.editBtn:hover{
+  background-color: rgb(182, 194, 255);
+  display: inline;
+  padding: 0px 10px;
+  
+}
+.listtasks{
+  margin-top: 5px;
+}
+p{
+
 }
