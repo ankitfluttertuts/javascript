@@ -40,29 +40,25 @@ buttonEvent.addEventListener("click",function(event){
     }
 );
 
+function createElement(tag, classList = "", id ="",value =""){
+    const element = document.createElement(tag);
+    if(classList) element.classList = classList;
+    if(id) element.id = id;
+    if(value) element.textContent = value;
+    return element;
+}
+
 // Function to update the UI with the current todo list
 function updateTodoListUI(todoList) {
-    // Clear the current todo list displayed
     todoListContentElement.innerHTML = "";
-
-    // Loop through the todo list and create list items
-    // todoList.forEach(function(task) {
-    //     let newListItem = document.createElement("p");
-    //     newListItem.textContent = task;
-    //     todoListContentElement.appendChild(newListItem);
-    // });
-
     todoList.forEach(function(task,index){
-        let newDiv = document.createElement("div")
-        newDiv.classList="listtasks";
-            let newListItem = document.createElement("p");
-            newListItem.textContent = task;
-            newDiv.appendChild(newListItem);
-            let button = document.createElement("button");
-            button.textContent = "Delete";
-            button.classList = "deleteBtn";
-            newDiv.appendChild(button);
-            todoListContentElement.appendChild(newDiv);
+         // Iterating the todoList
+         const newDiv = createElement("div","listtasks");
+         const newListItem = createElement("p","","",task);
+            newDiv.appendChild(newListItem);//set the paragraph to parent div
+            const button = createElement("button","deleteBtn","","Delete");
+            newDiv.appendChild(button); //Add the button to the parent div tag
+            todoListContentElement.appendChild(newDiv); //Add the parent div to the main div
             button.addEventListener("click",function(){
                 todoList.splice(index,1);
                 browserLocalStorage.setItem("todoList", JSON.stringify(todoList));
