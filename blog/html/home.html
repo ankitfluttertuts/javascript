@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <header>
+    <div id="mainHeader">
+      <div id="logo">
+        <img id="headerLogoImg" src="../src/header.png" alt="headerLogo" />
+      </div>
+      <i
+      class="fa-duotone fa-solid fa-bars"
+      id="hamburger"
+      onclick="toggleMenu()"
+    ></i>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#">Posts</a></li>
+          <li class="nav-item">
+            <a href="#">Concepts</a>
+            <ul class="dropdown">
+              <li class="sub-item"><a href="#">Java</a></li>
+              <li class="sub-item"><a href="#">Spring</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div id="headerSearch">
+        <i id="searchIcon" class="fa-sharp fa-solid fa-magnifying-glass"></i>
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Enter you search here..."
+        />
+      </div>
+      <!-- Hamburger Icon -->
+
+    </div>
+  </header>
+  <body>
+    <div id="mainBody">
+      <div id="sidebar">
+        <h1>
+          test
+        </h1>
+      </div>
+      <div id="mainContent"></div>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
