@@ -156,7 +156,7 @@
 #mainContent {
     width: 70%;
     min-height: 800px;
-    background-color: aqua;
+    background-color: rgb(238, 255, 0);
 }
 
 /* Hamburger Menu */
