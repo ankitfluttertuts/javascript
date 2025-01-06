@@ -227,40 +227,103 @@
     width: 80%; /* More flexible width */
     margin: 10px 0;
   }
-}    .slider-container {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-  }
-
-  .slider-images {
-    display: flex;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .slider-image {
+  .swiper-container {
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    overflow: hidden;
   }
-
-  .prev, .next {
-    position: absolute;
+  .swiper-button-next, .swiper-button-prev {
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
+    z-index: 10; /* Ensure buttons are on top of the content */
   }
 
-  .prev {
-    left: 10px;
+  /* Adjust positioning of navigation buttons */
+  .swiper-button-next {
+    right: 10px; /* Align to the right */
   }
 
-  .next {
-    right: 10px;
+  .swiper-button-prev {
+    left: 10px; /* Align to the left */
   }
+}
+
+/* Style the swiper container */
+.swiper-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Style for individual slides */
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* position: relative; */
+}
+
+/* Style for images inside slides */
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+z-index: 1;
+position: relative;
+}
+.swiper-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+  z-index: 2; /* Ensure the overlay is above the image */
+}
+.textData{
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+}
+
+/* Center the content inside each slide */
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Heading style */
+.slide-content h2 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+/* Paragraph style */
+.slide-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Button style */
+.slide-content .btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Hover effect for button */
+.slide-content .btn:hover {
+  background-color: #0056b3;
+}

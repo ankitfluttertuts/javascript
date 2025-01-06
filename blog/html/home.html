@@ -6,8 +6,13 @@
     <title>Home</title>
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <header>
@@ -16,10 +21,10 @@
         <img id="headerLogoImg" src="../src/header.png" alt="headerLogo" />
       </div>
       <i
-      class="fa-duotone fa-solid fa-bars"
-      id="hamburger"
-      onclick="toggleMenu()"
-    ></i>
+        class="fa-duotone fa-solid fa-bars"
+        id="hamburger"
+        onclick="toggleMenu()"
+      ></i>
       <nav class="navbar">
         <ul class="nav-list">
           <li class="nav-item"><a href="#">Home</a></li>
@@ -43,27 +48,33 @@
         />
       </div>
       <!-- Hamburger Icon -->
-
     </div>
   </header>
   <body>
-    <div class="slider-container">
-      <div class="slider-images">
-        <img class="slider-image" src="https://picsum.photos/1000/300?1" alt="Image 1">
-        <img class="slider-image" src="https://picsum.photos/1000/300?2" alt="Image 2">
-        <img class="slider-image" src="https://picsum.photos/1000/300?3" alt="Image 3">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1000/300?1" alt="Image 1" />
+          <h1 class="textData">Test</h1>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1000/300?2" alt="Image 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://picsum.photos/1000/300?3" alt="Image 3" />
+        </div>
       </div>
-      <span class="prev">&#10094;</span>
-      <span class="next">&#10095;</span>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
     <div id="mainBody">
       <div id="sidebar">
-        <h1>
-          test
-        </h1>
+        <h1>test</h1>
       </div>
       <div id="mainContent"></div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
