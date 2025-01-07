@@ -1,33 +1,22 @@
-/* Global Settings */
-:root {
-  --font-size-base: 2rem; /* Root font size */
-  --font-size-small: 1rem;
-  --font-size-medium: 1.5rem;
-  --font-size-large: 2.5rem;
-  --spacing-small: 1rem;  /* Small spacing */
-  --spacing-medium: 2rem; /* Medium spacing */
-  --spacing-large: 3rem;  /* Large spacing */
-  --container-padding: 5vw; /* Padding based on viewport width */
-  --header-height: 12rem; /* Base height for header */
-}
-
-/* Universal Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
 
 /* Main Header */
 #mainHeader {
   width: 100%;
-  height: var(--header-height);
+  height: 120px;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(255, 255, 255);
-  padding: 0 var(--spacing-small);
   z-index: 10;
+  background-color: rgb(255, 255, 255);
+  padding: 0 10px;
 }
 
 /* Header Logo Image */
@@ -51,7 +40,7 @@
   width: 30%;
   height: 100%;
   display: flex;
-  gap: var(--spacing-small);
+  gap: 3%;
   justify-content: center;
   align-items: center;
 }
@@ -59,19 +48,18 @@
 /* Header Search Icon */
 #searchIcon {
   color: black;
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 
-/* Search Input */
+/* Search Input Properties */
 #searchInput {
   color: black;
   width: 100%;
-  max-width: 30rem;
-  height: 3rem;
-  font-size: 1.2rem;
+  max-width: 300px;
+  height: 30px;
+  font-size: larger;
   font-family: "Courier New", Courier, monospace;
   font-weight: 700;
-  padding: 0.8rem;
 }
 
 /* Navbar Styling */
@@ -92,7 +80,7 @@
 
 .nav-item {
   position: relative;
-  margin: 0 2vw;
+  margin: 0 20px;
   border-radius: 5%;
 }
 
@@ -114,7 +102,7 @@
   top: 100%;
   left: 0;
   background-color: #000000;
-  min-width: 20rem;
+  min-width: 200px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -128,7 +116,7 @@
 }
 
 .dropdown li {
-  padding: 1rem;
+  padding: 10px;
 }
 
 .dropdown li a {
@@ -139,21 +127,23 @@
 .nav-item a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  padding: var(--spacing-small) var(--spacing-medium);
+  padding: 10px 20px;
   display: block;
-  font-size: var(--font-size-medium);
+  font-size: large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Search Input Placeholder */
 #searchInput::placeholder {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: rgba(20, 71, 255, 0.69);
 }
 
 /* Main Body Layout */
 #mainBody {
   display: flex;
+  /* margin-top: 0px; Push body content below the fixed header */
   width: 100%;
   position: relative;
 }
@@ -161,31 +151,28 @@
 /* Sidebar Styling */
 #sidebar {
   width: 30%;
-  min-height: 50vh;
+  min-height: 800px;
   background-color: burlywood;
-  padding: var(--spacing-medium);
 }
 
 /* Main Content Styling */
 #mainContent {
-  width: 70%;
-  padding: var(--spacing-medium);
-  text-justify: auto;
-  min-height: 50vh;
   position: relative;
+  width: 70%;
+padding: 3%;
+text-justify: auto;
+  min-height: 800px;
   background-color: rgb(241, 175, 175);
 }
 
 /* Hamburger Menu */
 #hamburger {
   display: none;
-  font-size: 2rem;
+  font-size: 30px;
   cursor: pointer;
-  padding: var(--spacing-small);
+  padding: 10px;
 }
-.swiper-button-next{
-    font-size: 1.5rem;
-}
+
 
 /* Mobile Layout - Responsive Design */
 @media screen and (max-width: 768px) {
@@ -193,24 +180,21 @@
     flex-direction: column;
     align-items: center;
     height: auto;
-    padding: var(--spacing-small) 0;
+    padding: 10px 0;
   }
-
   #sidebar {
     display: none;
   }
-
   #mainContent {
     width: 100%;
   }
-
   #logo {
     width: 100%;
-    height: 12rem;
+    height: 200px;
     text-align: center;
   }
 
-  /* Navbar Adjustment */
+  /* Navbar and Search Bar Adjustment */
   .navbar {
     display: none; /* Hide the navbar initially */
     width: 100%;
@@ -219,16 +203,16 @@
   }
 
   .nav-list {
-    display: block;
+    display: block; /* Make the list block */
   }
 
   .nav-item {
-    margin: var(--spacing-small) 0;
+    margin: 10px 0; /* Adjust margin for mobile */
   }
 
   .nav-item a {
-    font-size: 1.5rem;
-    padding: var(--spacing-small);
+    font-size: 1.2em;
+    padding: 10px;
   }
 
   /* Show Hamburger Icon */
@@ -244,46 +228,49 @@
   /* Search Input on mobile */
   #headerSearch {
     width: 100%;
-    margin-top: var(--spacing-small);
+    margin-top: 10px;
   }
 
   #searchInput {
-    width: 80%;
-    margin: var(--spacing-small) 0;
+    width: 80%; /* More flexible width */
+    margin: 10px 0;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure buttons are on top of the content */
   }
 
+  /* Adjust positioning of navigation buttons */
+  .swiper-button-next {
+    right: 10px; /* Align to the right */
+  }
+
+  .swiper-button-prev {
+    left: 10px; /* Align to the left */
+  }
   h1 {
     font-size: 6vw; /* Make the font smaller on small screens */
-  }
-
-  h2 {
-    font-size: 4vw; /* Make the font smaller on small screens */
-  }
-    /* Reduce the size of the swiper navigation arrows */
-.swiper-button-next, .swiper-button-prev {
-    font-size: 0.5rem; /* Reduce the size of the arrows */
-    width: 0.5rem; /* Adjust the button width */
-    height: 0.5rem; /* Adjust the button height */
-  }
-  
-  .swiper-button-next::after, .swiper-button-prev::after {
-    font-size: 0.5rem; /* Reduce the arrow icon size */
-    color: rgb(1, 1, 1);
-  }
+}
+h2 {
+  font-size: 4vw; /* Make the font smaller on small screens */
+}
 }
 
-/* Swiper Styles */
+/* Style the swiper container */
 .swiper-container {
   width: 100%;
-  height: 30rem;
+  height: 500px;
   overflow: hidden;
   position: relative;
-  -webkit-box-shadow: -1px 5px 25px 8px rgba(0,0,0,1);
--moz-box-shadow: -1px 5px 25px 8px rgba(0,0,0,1);
-box-shadow: -1px 5px 25px 8px rgba(0,0,0,1);
-z-index: 5;
 }
 
+/* Style for individual slides */
 .swiper-slide {
   display: flex;
   flex-direction: column;
@@ -293,27 +280,32 @@ z-index: 5;
   position: relative;
 }
 
+/* Style for images inside slides */
 .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
+z-index: 1;
+position: relative;
+border: solid 5px black;
 }
-
-.textData, .textDataContent {
+.textData, .textDataContent{
   position: absolute;
   color: white;
   z-index: 3;
   top: 20%;
   animation: textGrow 5s ease-in-out forwards;
 }
-
-.textDataContent {
+.textDataContent{
   top: 45%;
   margin-left: 10%;
   margin-right: 10%;
   animation-name: textGrow 30s ease-in-out forwards;
 }
-
+.swiper-wrapper{
+position: absolute;
+ 
+}
 @keyframes textGrow {
   0% {
     transform: scale(1);
@@ -322,34 +314,31 @@ z-index: 5;
     transform: scale(1.1);
   }
 }
-
-/* Preformatted Text */
 pre {
   background-color: #2d2d2d;
-  padding: 1rem;
+  padding: 15px;
   border-radius: 5px;
   font-family: "Courier New", Courier, monospace;
-  overflow-x: auto;
+  overflow-x: auto; /* Enables horizontal scrolling if the code is too wide */
   position: relative;
 }
-
 .copy-btn {
   position: absolute;
-  /* top: 10px;
-  right: 10px; */
-  top: 0.5rem;
-  right: 0.50rem;
+  top: 10px;
+  right: 10px;
   background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 0.5rem;
-  font-size: 1.2rem;
+  padding: 10px;
+  font-size: 14px;
   cursor: pointer;
   border-radius: 5px;
 }
-
+.codepre{
+  position: relative;
+}
 .copy-btn:hover {
-  background-color: #575757;
+  background-color: #45a049;
 }
 
 .copy-btn:active {
@@ -358,39 +347,18 @@ pre {
 
 .alert {
   display: none;
-  margin-top: var(--spacing-small);
-  padding: 1rem;
+  margin-top: 10px;
+  padding: 10px;
   background-color: #4CAF50;
   color: white;
   border-radius: 5px;
 }
-
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2); /* Black with 50% opacity */
   z-index: 2;
 }
-.codepre{
-    position: relative;
-  }
-  /* Reduce the size of the swiper navigation arrows */
-  .swiper-button-next, .swiper-button-prev {
-    font-size: 1.5rem; /* Reduce the size of the arrows */
-    width: 2.5rem; /* Adjust the button width */
-    height: 2.5rem; /* Adjust the button height */
-  }
-  
-  .swiper-button-next::after, .swiper-button-prev::after {
-    font-size: 1.5rem; /* Reduce the arrow icon size */
-    color: rgb(0, 0, 0);
-  }
-  pre[class*="language-"] {
-    font-size: 0.9rem; /* Adjust this as needed */
-    line-height: 1.6;
-    padding: 20px;
-    overflow-x: auto;
-  }
