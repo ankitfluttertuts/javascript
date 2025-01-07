@@ -14,7 +14,7 @@
 var swiper = new Swiper('.swiper-container', {
   loop: true, // Enable looping of slides
   autoplay: {
-    delay: 3000, // Auto-slide every 3 seconds
+    delay: 5000, // Auto-slide every 5 seconds
   },
   pagination: {
     el: '.swiper-pagination',
@@ -25,3 +25,19 @@ var swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 });
+    // Initialize Clipboard.js
+    const clipboard = new ClipboardJS('.copy-btn');
+
+    // Show the success alert when code is copied
+    clipboard.on('success', function(e) {
+        const alertBox = document.getElementById('copy-alert');
+        alertBox.style.display = 'block';
+        setTimeout(function() {
+            alertBox.style.display = 'none';
+        }, 2000);
+    });
+
+    // Optional: Add error handling for clipboard failures
+    clipboard.on('error', function(e) {
+        console.error('Error copying text to clipboard:', e);
+    });

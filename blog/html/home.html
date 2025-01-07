@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css" rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -32,8 +36,8 @@
           <li class="nav-item">
             <a href="#">Concepts</a>
             <ul class="dropdown">
-              <li class="sub-item"><a href="#">Java</a></li>
-              <li class="sub-item"><a href="#">Spring</a></li>
+<li class="sub-item"><a href="#">Java</a></li>
+<li class="sub-item"><a href="#">Spring</a></li>
             </ul>
           </li>
           <li class="nav-item"><a href="#">Contact Us</a></li>
@@ -54,16 +58,19 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="https://picsum.photos/1000/300?1" alt="Image 1" />
+          <img src="https://picsum.photos/800/600?1" alt="Image 1" />
           <h1 class="textData">Main Heading 1</h1>
+          <h2 class="textDataContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores voluptate rem doloribus, corrupti sint. Dolorem excepturi explicabo porro officia, vero quam ipsam, repudiandae quis blanditiis accusantium veniam laudantium repellat.</h2>
         </div>
         <div class="swiper-slide">
-          <img src="https://picsum.photos/1000/300?2" alt="Image 2" />
+          <img src="https://picsum.photos/800/600?2" alt="Image 2" />
           <h1 class="textData">Main Heading 2</h1>
+          <h2 class="textDataContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores voluptate rem doloribus, corrupti sint. Dolorem excepturi explicabo porro officia, vero quam ipsam, repudiandae quis blanditiis accusantium veniam laudantium repellat.</h2>
         </div>
         <div class="swiper-slide">
-          <img src="https://picsum.photos/1000/300?3" alt="Image 3" />
+          <img src="https://picsum.photos/800/600?3" alt="Image 3" />
           <h1 class="textData">Main Heading 3</h1>
+          <h2 class="textDataContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores voluptate rem doloribus, corrupti sint. Dolorem excepturi explicabo porro officia, vero quam ipsam, repudiandae quis blanditiis accusantium veniam laudantium repellat.</h2>
         </div>
       </div>
 
@@ -75,6 +82,33 @@
         <h1>test</h1>
       </div>
       <div id="mainContent">
+        <h1>Welcome Sample Code</h1>
+        <div class="codepre">
+<pre><code class="language-java" id="java-code">
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.util.Random;
+          
+public class RandomNumberServlet extends HttpServlet {
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // Set the response content type to HTML
+    response.setContentType("text/html");
+          
+    // Get the output stream to write to the browser
+    PrintWriter out = response.getWriter();
+          
+    // Generate a random number between 1 and 100
+    Random random = new Random();
+    int randomNumber = random.nextInt(100) + 1;
+          
+    // Display the random number on the webpage
+    out.println("<html><body>");    
+          </code>
+    </pre>
+          <button class="copy-btn" data-clipboard-target="#java-code">Copy Code</button>
+          <div class="alert" id="copy-alert">Code copied to clipboard!</div>
+        </div>
         <p class="maintextContent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi numquam adipisci non vitae dolorem incidunt reprehenderit animi ullam labore, quo nihil unde soluta voluptas inventore, autem id rerum ut qui?
         Facere assumenda placeat voluptatem eligendi tempore doloremque exercitationem? Accusamus mollitia aspernatur ipsa iusto culpa expedita obcaecati magni architecto molestiae ex, dolores quam ab possimus consequatur, fuga quos sint, exercitationem cum?
         Reprehenderit voluptatibus rerum, magnam quidem, pariatur voluptate vel velit exercitationem totam veritatis molestias ad rem labore error sequi voluptates! Provident eos fuga ab dignissimos non cumque! Odit numquam consequuntur maiores!
@@ -110,6 +144,8 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
