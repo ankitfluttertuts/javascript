@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css" rel="stylesheet" /> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<header>
+  <div id="mainHeader">
+    <div id="logo">
+      <img id="headerLogoImg" src="../src/header.png" alt="headerLogo" />
+    </div>
+    <i class="fa-duotone fa-solid fa-bars" id="hamburger" onclick="toggleMenu()"></i>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">Posts</a></li>
+        <li class="nav-item">
+          <a href="#">Concepts</a>
+          <ul class="dropdown">
+            <li class="sub-item"><a href="#">Java</a></li>
+            <li class="sub-item"><a href="#">Spring</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div id="headerSearch">
+      <i id="searchIcon" class="fa-sharp fa-solid fa-magnifying-glass"></i>
+      <input id="searchInput" type="text" placeholder="Enter you search here..." />
+    </div>
+    <!-- Hamburger Icon -->
+  </div>
+</header>
+
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img src="https://picsum.photos/800/600?1" alt="Image 1" />
+        <h2 class="textData">Main Heading 1</h2>
+        <p class="textDataContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores voluptate
+          rem doloribus, corrupti sint. Dolorem excepturi explicabo porro officia, vero quam ipsam, repudiandae quis
+          blanditiis accusantium veniam laudantium repellat.</p>
+        <div class="overlay"></div>
+      </div>
+      <div class="swiper-slide">
+        <img src="https://picsum.photos/800/600?2" alt="Image 2" />
+        <h2 class="textData">Main Heading 2</h2>
+        <p class="textDataContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores voluptate
+          rem doloribus, corrupti sint. Dolorem excepturi explicabo porro officia, vero quam ipsam, repudiandae quis
+          blanditiis accusantium veniam laudantium repellat.</p>
+      </div>
+      <div class="swiper-slide">
+        <img src="https://picsum.photos/800/600?3" alt="Image 3" />
+        <h2 class="textData">Main Heading 3</h2>
+        <p class="textDataContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores voluptate
+          rem doloribus, corrupti sint. Dolorem excepturi explicabo porro officia, vero quam ipsam, repudiandae quis
+          blanditiis accusantium veniam laudantium repellat.</p>
+      </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div id="mainBody">
+    <div id="sidebar">
+      <h1>test</h1>
+    </div>
+    <div id="mainContent">
+      <h1>Welcome Sample Code</h1>
+      <div class="codepre">
+        <pre><code class="language-java" id="java-code">
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.util.Random;
+          
+public class RandomNumberServlet extends HttpServlet {
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // Set the response content type to HTML
+    response.setContentType("text/html");
+          
+    // Get the output stream to write to the browser
+    PrintWriter out = response.getWriter();
+          
+    // Generate a random number between 1 and 100
+    Random random = new Random();
+    int randomNumber = random.nextInt(100) + 1;
+          
+    // Display the random number on the webpage
+    out.println("<html><body>");    
+          </code>
+    </pre>
+        <button class="copy-btn" data-clipboard-target="#java-code">Copy Code</button>
+        <div class="alert" id="copy-alert">Code copied to clipboard!</div>
+      </div>
+      <p class="maintextContent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi numquam adipisci non
+        vitae dolorem incidunt reprehenderit animi ullam labore, quo nihil unde soluta voluptas inventore, autem id
+        rerum ut qui?
+        Facere assumenda placeat voluptatem eligendi tempore doloremque exercitationem? Accusamus mollitia aspernatur
+        ipsa iusto culpa expedita obcaecati magni architecto molestiae ex, dolores quam ab possimus consequatur, fuga
+        quos sint, exercitationem cum?
+        Reprehenderit voluptatibus rerum, magnam quidem, pariatur voluptate vel velit exercitationem totam veritatis
+        molestias ad rem labore error sequi voluptates! Provident eos fuga ab dignissimos non cumque! Odit numquam
+        consequuntur maiores!
+        Sint esse in doloremque non sunt? Expedita adipisci velit nostrum eos amet! Numquam error laudantium architecto
+        tempore mollitia. Eius, libero. Blanditiis maiores tempora minima numquam aspernatur? Nam architecto quae
+        repellat?
+        Magni ipsam nisi porro est minima numquam rerum. Nobis magnam amet repudiandae eligendi soluta ullam earum
+        sapiente quam error ipsum molestiae, tempore et voluptate reiciendis pariatur quisquam est odio maiores!
+        Placeat nobis voluptate atque voluptates quasi natus minus, laboriosam eum fugiat harum officiis eos aspernatur
+        molestias ut accusantium fugit esse ab unde, quaerat ea mollitia quam, repellat quis porro! Explicabo.
+        Praesentium placeat ut itaque libero quisquam impedit mollitia iste! Incidunt, eveniet molestiae. Voluptatibus
+        fuga distinctio necessitatibus. Delectus iure adipisci distinctio consectetur cumque nemo sequi quisquam fugiat
+        voluptates dolor. Sit, voluptates.
+        Quis praesentium facilis autem nulla laboriosam minima cum ducimus accusantium adipisci id! Eaque molestiae ad
+        quo asperiores temporibus dolor architecto vel neque impedit, accusamus reiciendis veniam, itaque quos amet
+        voluptates!
+        Asperiores ullam id ipsa explicabo nesciunt perferendis fugit molestiae sunt consequatur, optio sapiente est
+        dolore repellat et! Sed ab error ex? Minima officia, tenetur animi soluta temporibus pariatur eum inventore.
+        Sint voluptatum molestias quasi in, praesentium commodi quo esse illum provident voluptas exercitationem nisi
+        quos aperiam, accusantium nihil ex, eaque repellendus quisquam facilis cumque incidunt illo voluptate? Cum,
+        earum quis.
+        Quae quia odit magnam nam magni consequatur officia veritatis mollitia pariatur. Illo quas quidem iure! Labore
+        repudiandae sunt, aspernatur pariatur sequi dolorem inventore, animi omnis, odit earum ad! Molestiae,
+        necessitatibus.
+        Quis cum numquam nemo fuga hic omnis culpa nihil ut ea quam reiciendis maxime ex voluptates consequatur tempora
+        est, placeat molestiae eaque autem magni iste suscipit doloremque minus! Nobis, nam.
+        Rem quasi nisi laborum alias consequatur minima temporibus. Velit ut error veniam fugiat aut dolore architecto
+        impedit repellendus repellat doloribus reprehenderit, corrupti, odio qui ea iste et vero, enim vitae!
+        Reprehenderit natus incidunt repellendus aperiam, quos nesciunt, adipisci impedit id enim corrupti deserunt
+        quas! Alias saepe neque eum magnam sapiente ut laborum. Quibusdam quos nihil animi officiis magnam excepturi
+        odio.
+        Expedita, explicabo dolorum. Necessitatibus doloremque numquam cumque qui maxime! Molestias quas minus
+        consectetur harum iusto tempore minima excepturi vero porro adipisci fuga distinctio repudiandae obcaecati
+        cupiditate illo quo, assumenda delectus.
+        Atque corrupti laboriosam consequuntur doloremque ullam. Molestias dolor obcaecati omnis, inventore maiores
+        ducimus ipsum! Ipsam, reprehenderit fuga! Aliquid eos voluptas itaque possimus dolore mollitia iure, quaerat
+        deleniti suscipit veritatis velit.
+        Mollitia fuga impedit eum nostrum a culpa exercitationem, voluptatem possimus ducimus provident blanditiis,
+        aspernatur perspiciatis officia esse, labore ratione pariatur sit distinctio voluptatibus? Mollitia cumque,
+        recusandae commodi beatae animi nostrum!
+        Esse iusto magni aliquam voluptas, recusandae commodi veniam eaque vel necessitatibus, autem perspiciatis
+        tempore molestias porro dicta. Possimus quae, distinctio velit nihil ratione, quos saepe, recusandae corporis
+        aliquid similique architecto?
+        Voluptatibus aliquam architecto at quidem explicabo tenetur veritatis, quo repellendus ex veniam consectetur?
+        Eligendi amet eaque odio reprehenderit voluptatem fugit error commodi et cum ducimus. Nihil sint et dolore fuga?
+        Voluptatem ea optio consectetur vel itaque, rerum necessitatibus aliquid, dolores maxime eos, natus sit porro!
+        Esse dignissimos suscipit ad consequatur. Debitis, officia praesentium! Fugiat fugit repudiandae maxime,
+        possimus esse illum.
+        Nam dicta doloribus quas assumenda modi voluptas facere ratione quaerat consequuntur voluptatibus nulla,
+        voluptates eius accusamus impedit repellat. Aspernatur ex voluptas ducimus accusantium laudantium repellat. Quas
+        eius quibusdam harum mollitia.
+        Dolorum quas expedita natus iusto cumque unde quo fugit deserunt, nihil commodi numquam minus, ex explicabo iure
+        sapiente fuga alias assumenda enim magnam vitae, veritatis provident nemo facere. Exercitationem, a.
+        Accusantium, mollitia culpa? Dignissimos molestiae labore accusantium veritatis architecto odit officiis nobis
+        repudiandae, fuga deserunt explicabo voluptate doloribus a tempora debitis quisquam numquam saepe soluta,
+        reprehenderit eum, unde ratione praesentium.
+        Repellat sint voluptate rerum aperiam sequi alias rem quisquam excepturi nihil id magnam, similique, cumque, in
+        enim ad at officiis temporibus accusantium autem ducimus saepe dignissimos assumenda libero mollitia? Quod.
+        Eaque, laboriosam dolores asperiores pariatur quos maiores iusto sit atque cumque vitae. Voluptate velit ab
+        explicabo reiciendis cupiditate quasi cumque recusandae at repellat nisi. In omnis accusamus voluptates
+        veritatis nemo?
+        Odio, reiciendis labore? Quidem ipsam, molestiae excepturi ut fugit fuga praesentium nulla ducimus illo soluta
+        fugiat impedit quibusdam sint est possimus nisi iure tenetur unde quia reprehenderit. Fuga, quae similique!
+        Odit cupiditate dolorem libero cumque quia, unde facilis aperiam eveniet rerum quibusdam dignissimos quo ipsa
+        sunt adipisci reprehenderit doloremque nemo beatae! Rem ad temporibus nostrum! Non quam dignissimos optio
+        itaque.
+        Consectetur cum distinctio, quaerat dolor numquam reiciendis optio hic non? Fugiat, laudantium quo ullam error
+        dolores corporis rerum quidem magni consequuntur quasi alias doloremque optio non eos? Sapiente, dolorem ea.
+        Magni mollitia sapiente unde asperiores quasi veniam officia, voluptas, autem pariatur perferendis eaque
+        deserunt voluptates assumenda facilis saepe voluptate obcaecati modi expedita dolores amet id fugiat quia
+        laboriosam. Nemo, adipisci!
+        Magni et molestias veniam vitae iste temporibus porro architecto accusantium, repellendus incidunt sint commodi
+        reprehenderit odit deserunt! Placeat qui quos quis minus magnam rerum officia. Dicta possimus voluptates
+        reprehenderit nobis.
+        Dicta officia quibusdam nisi provident tempore facere repellendus, eligendi nesciunt ex amet nobis
+        exercitationem voluptates minima impedit assumenda sit aliquid. Dicta, minus! Laudantium consequatur iste
+        tempore deleniti minus explicabo aspernatur.
+        Laboriosam voluptate temporibus minus magnam numquam, veniam soluta cum accusantium reprehenderit adipisci magni
+        deleniti dolorem optio similique! Reprehenderit cupiditate error, culpa nobis, aut optio corrupti quia tempore
+        reiciendis eius </p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  <!-- Include Prism.js Java syntax -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-java.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+
+</html>
