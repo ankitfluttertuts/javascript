@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
 
     <link
       rel="stylesheet"
@@ -34,7 +31,7 @@
           <li class="nav-item"><a href="#">Home</a></li>
           <li class="nav-item"><a href="#">Posts</a></li>
           <li class="nav-item">
-            <a href="#">Concepts</a>
+            <a href="#">Concepts <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown">
 <li class="sub-item"><a href="#">Java</a></li>
 <li class="sub-item"><a href="#">Spring</a></li>
@@ -48,7 +45,7 @@
         <input
           id="searchInput"
           type="text"
-          placeholder="Enter you search here..."
+          placeholder="Search here..."
         />
       </div>
       <!-- Hamburger Icon -->
@@ -145,8 +142,10 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
         Laboriosam voluptate temporibus minus magnam numquam, veniam soluta cum accusantium reprehenderit adipisci magni deleniti dolorem optio similique! Reprehenderit cupiditate error, culpa nobis, aut optio corrupti quia tempore reiciendis eius </p>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-java.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
     <script src="../js/script.js"></script>
   </body>

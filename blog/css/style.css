@@ -8,7 +8,7 @@
   --spacing-medium: 2rem; /* Medium spacing */
   --spacing-large: 3rem;  /* Large spacing */
   --container-padding: 5vw; /* Padding based on viewport width */
-  --header-height: 12rem; /* Base height for header */
+  --header-height: 8rem; /* Base height for header */
 }
 
 /* Universal Reset */
@@ -25,8 +25,6 @@
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
-  background-color: rgb(255, 255, 255);
-  padding: 0 var(--spacing-small);
   z-index: 10;
 }
 
@@ -39,11 +37,8 @@
 /* Header Logo Div */
 #logo {
   width: 30%;
-  background-color: blue;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-grow: 1;
 }
 
 /* Header Search Bar */
@@ -51,6 +46,7 @@
   width: 30%;
   height: 100%;
   display: flex;
+  flex-grow: 1;
   gap: var(--spacing-small);
   justify-content: center;
   align-items: center;
@@ -66,18 +62,21 @@
 #searchInput {
   color: black;
   width: 100%;
-  max-width: 30rem;
+  /* max-width: 30rem; */
   height: 3rem;
   font-size: 1.2rem;
   font-family: "Courier New", Courier, monospace;
   font-weight: 700;
-  padding: 0.8rem;
+  /* padding: 0.8rem; */
+  margin-right: 1.2rem;
 }
 
 /* Navbar Styling */
 .navbar {
+  flex-grow: 3;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-list {
@@ -97,28 +96,30 @@
 }
 
 .nav-item:hover {
-  background-color: rgba(255, 150, 45, 0.288);
+  border-radius: 10%;
 }
 
 .sub-item:hover {
-  background-color: bisque;
+  background-color: rgb(255, 222, 182);
 }
 
 .sub-item:hover a {
   color: #000000;
+  
 }
-
+.sub-item  {
+  font-size: 100px;
+}
 .dropdown {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #000000;
-  min-width: 20rem;
+  min-width: 10rem;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  transition: opacity 0.3s ease;
   z-index: 10;
 }
 
@@ -136,19 +137,22 @@
   text-decoration: none;
 }
 
+.nav-item a:hover{
+  text-shadow: 1px 9px 11px rgba(150,196,255,0.57);
+}
 .nav-item a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  padding: var(--spacing-small) var(--spacing-medium);
   display: block;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-small);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 13px 0px 9px rgba(0,0,0,0.57);
 }
 
 /* Search Input Placeholder */
 #searchInput::placeholder {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: rgba(20, 71, 255, 0.69);
+  color: rgba(2, 41, 181, 0.69);
 }
 
 /* Main Body Layout */
@@ -227,7 +231,8 @@
   }
 
   .nav-item a {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
     padding: var(--spacing-small);
   }
 
@@ -244,12 +249,16 @@
   /* Search Input on mobile */
   #headerSearch {
     width: 100%;
-    margin-top: var(--spacing-small);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
   #searchInput {
     width: 80%;
-    margin: var(--spacing-small) 0;
+    /* margin: var(--spacing-small) 0; */
+ 
   }
 
   h1 {
