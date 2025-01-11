@@ -46,6 +46,7 @@ function closeDropdown(event) {
   }
 }
 document.addEventListener('touchstart', closeDropdown);
+document.addEventListener('click', closeDropdown);
 
 // Initialize Swiper
 var swiper = new Swiper('.swiper-container', {
