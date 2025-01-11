@@ -78,6 +78,14 @@
   justify-content: space-between;
   align-items: center;
 }
+.sub-item a{
+  /* text-decoration: none;  */
+  color: rgb(180, 0, 0); /* Text color */
+  font-size: 126px; /* Font size for submenu items */
+  padding: 10px 15px; /* Padding for submenu items */
+  display: block; /* Make submenu items block-level */
+  transition: background-color 0.3s ease; /* Smooth background change on hover */
+}
 
 .nav-list {
   list-style-type: none;
@@ -107,52 +115,50 @@
   color: #000000;
   
 }
-.sub-item  {
-  font-size: 100px;
-}
+
+
 .dropdown {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #000000;
-  min-width: 10rem;
+  min-width: 8rem;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   z-index: 10;
+  transition: height 0.3s ease, opacity 0.3s ease; /* Smooth slide and fade-in effect */
+
 }
 
-.nav-item:hover .dropdown {
+.selected{
   display: block;
-  opacity: 1;
 }
 
 .dropdown li {
-  padding: 1rem;
+  padding: 1rem 0.5rem 1rem 0.5;
 }
 
 .dropdown li a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
+  font-size: var(--font-size-small);
 }
 
 .nav-item a:hover{
-  text-shadow: 1px 9px 11px rgba(150,196,255,0.57);
+  color: #000000;
 }
 .nav-item a {
-  color: rgb(0, 0, 0);
+  color: rgb(55, 55, 55);
   text-decoration: none;
   display: block;
   font-size: var(--font-size-small);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-shadow: 13px 0px 9px rgba(0,0,0,0.57);
 }
 
 /* Search Input Placeholder */
 #searchInput::placeholder {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: rgba(2, 41, 181, 0.69);
+  color: rgb(0, 0, 0);
 }
 
 /* Main Body Layout */
@@ -279,6 +285,10 @@
     font-size: 0.5rem; /* Reduce the arrow icon size */
     color: rgb(1, 1, 1);
   }
+  .dropdown{
+    left: 40%;
+    top: 85%;
+  }
 }
 
 /* Swiper Styles */
@@ -330,6 +340,7 @@ z-index: 5;
   100% {
     transform: scale(1.1);
   }
+  
 }
 
 /* Preformatted Text */

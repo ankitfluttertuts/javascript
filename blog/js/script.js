@@ -1,6 +1,10 @@
     console.log("JS Started...")
     const navList = document.querySelector('.navbar');
+    const navItem = document.querySelector('.nav-item');
+    const dropdownIcon = document.querySelector('.nav-item i'); 
+    const conceptsLink = document.querySelector('.nav-item a');
     const hamBurgerIcon  = document.getElementById('hamburger'); 
+    const dropdownElement = document.querySelector('.dropdown');
     
   
     // Toggle the navigation menu when hamburger is clicked
@@ -10,6 +14,23 @@
         hamBurgerIcon.classList.toggle('fa-xmark');
       }
 
+// Function to toggle the dropdown (add/remove 'selected' class)
+function activateDropDown(event) {
+  // Toggle the 'selected' class to show or hide the dropdown
+  event.stopPropagation(); // Prevent click event from propagating to the document
+
+  dropdownElement.classList.add('selected');
+  console.log('called')
+}
+
+// Close the dropdown when clicking outside the Concepts dropdown
+document.addEventListener('click', function(event) {
+  // If the click is outside the Concepts link or dropdown, close it
+  if (!conceptsLink.contains(event.target) && !dropdownElement.contains(event.target)) {
+    dropdownElement.classList.remove('selected');
+    console.log('dropdown cloased')
+  }
+});
 // Initialize Swiper
 var swiper = new Swiper('.swiper-container', {
   loop: true, // Enable looping of slides
