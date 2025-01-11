@@ -17,20 +17,36 @@
 // Function to toggle the dropdown (add/remove 'selected' class)
 function activateDropDown(event) {
   // Toggle the 'selected' class to show or hide the dropdown
-  event.stopPropagation(); // Prevent click event from propagating to the document
+  event.stopPropagation(); 
+  // Prevent click event from propagating to the document
 
-  dropdownElement.classList.add('selected');
-  console.log('called')
+  // If the dropdown is already open, close it
+  if (dropdownElement.classList.contains('selected')) {
+    dropdownIcon.classList.remove('fa-chevron-up');  // Change icon to down
+    dropdownIcon.classList.add('fa-chevron-down');
+    dropdownElement.classList.remove('selected');
+    console.log('Dropdown closed');
+  } else {
+    // Otherwise, open it
+    dropdownElement.classList.add('selected');
+    dropdownIcon.classList.remove('fa-chevron-down'); // Change icon to up
+    dropdownIcon.classList.add('fa-chevron-up');      // Add the up icon
+    console.log('Dropdown opened');
+  }
 }
 
-// Close the dropdown when clicking outside the Concepts dropdown
-document.addEventListener('click', function(event) {
-  // If the click is outside the Concepts link or dropdown, close it
+// Close the dropdown when clicking or touching outside the Concepts dropdown
+function closeDropdown(event) {
+  // If the click/touch is outside the Concepts link or dropdown, close it
   if (!conceptsLink.contains(event.target) && !dropdownElement.contains(event.target)) {
     dropdownElement.classList.remove('selected');
-    console.log('dropdown cloased')
+    dropdownIcon.classList.remove('fa-chevron-up');  // Change icon to down
+    dropdownIcon.classList.add('fa-chevron-down');   // Add the down icon
+    console.log('Dropdown closed from outside');
   }
-});
+}
+document.addEventListener('touchstart', closeDropdown);
+
 // Initialize Swiper
 var swiper = new Swiper('.swiper-container', {
   loop: true, // Enable looping of slides
