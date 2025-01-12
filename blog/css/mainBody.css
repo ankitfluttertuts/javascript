@@ -153,6 +153,9 @@ pre {
     h1 {
       font-size: 6vw; /* Make the font smaller on small screens */
     }
+    #mainContent {
+        width: 100%;
+      }
   
     h2 {
       font-size: 4vw; /* Make the font smaller on small screens */
