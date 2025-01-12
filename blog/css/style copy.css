@@ -1,0 +1,243 @@
+/* Global Settings */
+:root {
+  --font-size-base: 2rem; /* Root font size */
+  --font-size-small: 1rem;
+  --font-size-medium: 1.5rem;
+  --font-size-large: 2.5rem;
+  --spacing-small: 1rem;  /* Small spacing */
+  --spacing-medium: 2rem; /* Medium spacing */
+  --spacing-large: 3rem;  /* Large spacing */
+  --container-padding: 5vw; /* Padding based on viewport width */
+  --header-height: 8rem; /* Base height for header */
+}
+
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.swiper-button-next{
+    font-size: 1.5rem;
+}
+
+/* Mobile Layout - Responsive Design */
+@media screen and (max-width: 768px) {
+  #mainHeader {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: var(--spacing-small) 0;
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  #mainContent {
+    width: 100%;
+  }
+
+  #logo {
+    width: 100%;
+    height: 12rem;
+    text-align: center;
+  }
+
+  /* Navbar Adjustment */
+  .navbar {
+    display: none; /* Hide the navbar initially */
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-list {
+    display: block;
+  }
+
+  .nav-item {
+    margin: var(--spacing-small) 0;
+  }
+
+  .nav-item a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: var(--spacing-small);
+  }
+
+  /* Show Hamburger Icon */
+  #hamburger {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
+  /* When menu is active, show the navbar */
+  .active {
+    display: block;
+  }
+
+  /* Search Input on mobile */
+  #headerSearch {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #searchInput {
+    width: 80%;
+    /* margin: var(--spacing-small) 0; */
+ 
+  }
+
+  h1 {
+    font-size: 6vw; /* Make the font smaller on small screens */
+  }
+
+  h2 {
+    font-size: 4vw; /* Make the font smaller on small screens */
+  }
+    /* Reduce the size of the swiper navigation arrows */
+.swiper-button-next, .swiper-button-prev {
+    font-size: 0.5rem; /* Reduce the size of the arrows */
+    width: 0.5rem; /* Adjust the button width */
+    height: 0.5rem; /* Adjust the button height */
+  }
+  
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 0.5rem; /* Reduce the arrow icon size */
+    color: rgb(1, 1, 1);
+  }
+  .dropdown{
+    left: 40%;
+    top: 85%;
+  }
+}
+
+/* Swiper Styles */
+.swiper-container {
+  width: 100%;
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: -1px 5px 25px 8px rgba(0,0,0,1);
+-moz-box-shadow: -1px 5px 25px 8px rgba(0,0,0,1);
+box-shadow: -1px 5px 25px 8px rgba(0,0,0,1);
+z-index: 5;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textData, .textDataContent {
+  position: absolute;
+  color: white;
+  z-index: 3;
+  top: 20%;
+  animation: textGrow 5s ease-in-out forwards;
+}
+
+.textDataContent {
+  top: 45%;
+  margin-left: 10%;
+  margin-right: 10%;
+  animation-name: textGrow 30s ease-in-out forwards;
+}
+
+@keyframes textGrow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+  
+}
+
+/* Preformatted Text */
+pre {
+  background-color: #2d2d2d;
+  padding: 1rem;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  overflow-x: auto;
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  /* top: 10px;
+  right: 10px; */
+  top: 0.5rem;
+  right: 0.50rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.copy-btn:hover {
+  background-color: #575757;
+}
+
+.copy-btn:active {
+  background-color: #3e8e41;
+}
+
+.alert {
+  display: none;
+  margin-top: var(--spacing-small);
+  padding: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.codepre{
+    position: relative;
+  }
+  /* Reduce the size of the swiper navigation arrows */
+  .swiper-button-next, .swiper-button-prev {
+    font-size: 1.5rem; /* Reduce the size of the arrows */
+    width: 2.5rem; /* Adjust the button width */
+    height: 2.5rem; /* Adjust the button height */
+  }
+  
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 1.5rem; /* Reduce the arrow icon size */
+    color: rgb(0, 0, 0);
+  }
+  pre[class*="language-"] {
+    font-size: 0.9rem; /* Adjust this as needed */
+    line-height: 1.6;
+    padding: 20px;
+    overflow-x: auto;
+  }

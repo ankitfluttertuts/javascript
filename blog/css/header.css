@@ -1,0 +1,218 @@
+@import url(/blog/css/style.css);
+
+/* Main Header */
+#mainHeader {
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+  }
+  
+  /* Header Logo Image */
+  #headerLogoImg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Header Logo Div */
+  #logo {
+    width: 30%;
+    height: 100%;
+    flex-grow: 1;
+  }
+  
+  /* Header Search Bar */
+  #headerSearch {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    gap: var(--spacing-small);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Header Search Icon */
+  #searchIcon {
+    color: black;
+    font-size: 1.5rem;
+  }
+  
+  /* Search Input */
+  #searchInput {
+    color: black;
+    width: 100%;
+    /* max-width: 30rem; */
+    height: 3rem;
+    font-size: 1.2rem;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 700;
+    /* padding: 0.8rem; */
+    margin-right: 1.2rem;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    flex-grow: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sub-item a{
+    /* text-decoration: none;  */
+    color: rgb(180, 0, 0); /* Text color */
+    font-size: 126px; /* Font size for submenu items */
+    padding: 10px 15px; /* Padding for submenu items */
+    display: block; /* Make submenu items block-level */
+    transition: background-color 0.3s ease; /* Smooth background change on hover */
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .nav-item {
+    position: relative;
+    margin: 0 2vw;
+    border-radius: 5%;
+  }
+  
+  .nav-item:hover {
+    border-radius: 10%;
+  }
+  
+  .sub-item:hover {
+    background-color: rgb(255, 222, 182);
+  }
+  
+  .sub-item:hover a {
+    color: #000000;
+    
+  }
+  
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
+    min-width: 8rem;
+    list-style-type: none;
+    z-index: 10;
+    transition: height 0.3s ease, opacity 0.3s ease; /* Smooth slide and fade-in effect */
+  
+  }
+  
+  .selected{
+    display: block;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition for both height and opacity */
+  
+  }
+  
+  .dropdown li {
+    padding: 1rem 0.5rem 1rem 0.5;
+  }
+  
+  .dropdown li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: var(--font-size-small);
+  }
+  
+  .nav-item a:hover{
+    color: #000000;
+  }
+  .nav-item a {
+    color: rgb(55, 55, 55);
+    text-decoration: none;
+    display: block;
+    font-size: var(--font-size-small);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* Search Input Placeholder */
+  #searchInput::placeholder {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+  }
+  /* Hamburger Menu */
+#hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: var(--spacing-small);
+  }
+  
+/* Mobile Layout - Responsive Design */
+@media screen and (max-width: 768px) {
+    #logo {
+      width: 100%;
+      height: 12rem;
+      text-align: center;
+    }
+  
+    /* Navbar Adjustment */
+    .navbar {
+      display: none; /* Hide the navbar initially */
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-list {
+      display: block;
+    }
+  
+    .nav-item {
+      margin: var(--spacing-small) 0;
+    }
+  
+    .nav-item a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: var(--spacing-small);
+    }
+  
+    /* Show Hamburger Icon */
+    #hamburger {
+      display: block; /* Show hamburger icon on mobile */
+    }
+  
+    /* When menu is active, show the navbar */
+    .active {
+      display: block;
+    }
+  
+    /* Search Input on mobile */
+    #headerSearch {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+    }
+  
+    #searchInput {
+      width: 80%;
+      /* margin: var(--spacing-small) 0; */
+   
+    }
+  
+    h1 {
+      font-size: 6vw; /* Make the font smaller on small screens */
+    }
+  
+    h2 {
+      font-size: 4vw; /* Make the font smaller on small screens */
+    }
+  }
+  
+  
